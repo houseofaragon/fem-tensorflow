@@ -30,6 +30,7 @@ const init = async () => {
 const loop = async () => {
     webcam.update()
     await predict()
+    window.requestAnimationFrame(loop)
 }
 
 const predict = async () => {
